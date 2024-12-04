@@ -27,6 +27,8 @@ Este projeto é uma API RESTful para cadastro de pessoas, desenvolvida como exem
 
 
 
+
+
 🔧 Configuração
 Requisitos
 Java 17+
@@ -34,6 +36,7 @@ Maven
 RabbitMQ (pode ser usado o CloudAMQP para servidores na nuvem)
 Configuração do Banco de Dados
 O projeto utiliza H2 Database como banco em memória. As configurações padrão estão no arquivo application.properties:
+
 
 properties
 Copiar código
@@ -46,6 +49,8 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 Configuração do RabbitMQ
 Defina as credenciais e o host do RabbitMQ no application.properties:
 
+
+
 properties
 Copiar código
 spring.rabbitmq.host=SEU_HOST
@@ -57,6 +62,8 @@ spring.rabbitmq.password=SUA_SENHA
 📤 Endpoints
 Cadastro de Pessoas
 POST /api/pessoas
+
+
 Request Body
 json
 Copiar código
@@ -65,6 +72,9 @@ Copiar código
   "email": "joao.silva@email.com",
   "telefone": "123456789"
 }
+
+
+
 Response
 json
 Copiar código
@@ -75,6 +85,17 @@ Copiar código
   "telefone": "123456789",
   "dataHoraCadastro": "2024-12-04T14:00:00"
 }
+
+
+
+
+
+
+
+
+
+
+
 
 🏗️ Próximas Melhorias
 Implementar API para leitura da fila e envio de e-mails.
